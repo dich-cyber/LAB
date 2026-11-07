@@ -1,0 +1,41 @@
+# k=0
+# l=[]
+# n = int(input())
+# for i in range(n):
+#     st = list(map(int, input().split()))
+#     l.append(st)
+# for i in range(n):
+#     for j in range(n):
+#         if l[i][j] == l[j][i]:
+#             k+=1
+# if k ==  n*n:
+#     print('true')
+# else:
+#     print('false')
+
+
+l=[]
+n = int(input())
+for i in range(n):
+    st = list(map(int, input().split()))
+    l.append(st)
+p=[]
+m = int(input())
+for i in range(m):
+    st = list(map(int, input().split()))
+    p.append(st)
+
+k = []
+for z in range(n):
+    row = []
+
+    for x in range(m):
+        s = 0
+
+        for c in range(m):
+            s = s + l[z][c] * p[x][c]
+
+        row.append(s)
+
+    k.append(row)
+print(k)
